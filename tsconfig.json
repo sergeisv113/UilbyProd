@@ -12,6 +12,8 @@
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "allowJs": true,
     "moduleResolution": "node",
+    // Для абсолютного импорта
+    "baseUrl": "../../ЗАГРУЗКИ/Продвинутый Frontend. В Production на React (2023)/1. Webpack. Введение в арх-ру. Code splitting. Css Modules/2 Декомпозиция конфига. Опции конфигурации/2_lesson/production_project_code_source-master",
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js
     // import Moment from 'moment';
