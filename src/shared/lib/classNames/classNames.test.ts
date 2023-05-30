@@ -5,13 +5,13 @@ describe('classNames', () => {
         expect(classNames('someClass')).toBe('someClass');
     });
 
-    test('with addintial class', () => {
+    test('with additional class', () => {
         const expected = 'someClass class1 class2';
         expect(classNames('someClass', {}, ['class1', 'class2']))
             .toBe(expected);
     });
 
-    test('with addintial class', () => {
+    test('with mods', () => {
         const expected = 'someClass class1 class2 hovered scrollable';
         expect(classNames(
             'someClass',
@@ -19,8 +19,9 @@ describe('classNames', () => {
             ['class1', 'class2'],
         )).toBe(expected);
     });
-    test('with addintial class', () => {
-        const expected = 'someClass class1 class2 hovered ';
+
+    test('with mods false', () => {
+        const expected = 'someClass class1 class2 hovered';
         expect(classNames(
             'someClass',
             { hovered: true, scrollable: false },
@@ -28,8 +29,8 @@ describe('classNames', () => {
         )).toBe(expected);
     });
 
-    test('with addintial class', () => {
-        const expected = 'someClass class1 class2 hovered scrollable';
+    test('with mods undefined', () => {
+        const expected = 'someClass class1 class2 hovered';
         expect(classNames(
             'someClass',
             { hovered: true, scrollable: undefined },
