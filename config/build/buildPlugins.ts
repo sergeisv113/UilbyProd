@@ -5,7 +5,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
-    const plagins = [
+    const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
@@ -20,11 +20,11 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     ];
 
     if (isDev) {
-        plagins.push(new webpack.HotModuleReplacementPlugin());
-        plagins.push(new BundleAnalyzerPlugin({
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
         }));
     }
 
-    return plagins;
+    return plugins;
 }
